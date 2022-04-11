@@ -1,0 +1,327 @@
+"""
+Your module description
+"""
+import random
+
+"""
+number = random.randint(1,10) #en la variable number guardo un numero generado automaticamente entre 1 y 10
+isGuessRight = False #establezco una variable para forzar que el bucle no termine en la primera
+
+while isGuessRight != True:
+ guess = input("Guess a number between 1 and 10: ")
+ if int(guess) == number:
+   print("You guessed {}. That is correct! You win!".format(guess))
+   isGuessRight = True
+ else:
+   print("You guessed {}. Sorry, that isn’t it. Try again.".format(guess))
+ """  
+   
+   #------saber si adivinó la frase-----------
+adivino = False
+
+while adivino != True:
+ adivina_palabra = input("ingresa una palabra ")
+ if adivina_palabra != "salir":
+    print(adivina_palabra)
+ else:
+    adivino = True
+    print("ha salido del juego")
+"""
+Your module description
+escribir un programa que pregunte al usuario una cantidad a invertir, el interes anual 
+y el numero de años, y muestre por pantalla el capital obtenido en la inversion
+"""
+
+#1. Preguntar cantidad
+cantidad = float(input("¿Cantidad que desea invertir?"))
+
+#2. Preguntar interes anual
+interes = float(input("interés porcentual anual?"))
+
+#3. Preguntar el numeros de años
+anios= float(input("años?"))
+
+#4. Mostrar por pantalla el capital obtenido
+
+capital = round(cantidad * (interes/100+1)**anios,2) #redondeo a dos decimales
+
+print("capital obtenido" , capital)
+
+print("capital obtenido" + str(capital))
+
+"""
+Your module description
+"""
+payasos = int(input("ingrese cantidad de payasos venididos "))
+muniecas = int(input("ingrese cantidad de muñecas vendidas"))
+
+peso_gr = (payasos*112) + (muniecas*75)
+
+print("El peso total es de " , peso_gr, "gr")
+
+peso_kg = peso_gr*1/1000
+
+print("El peso total en kg es de " , peso_kg , "kg")
+vin,make,model,year,range,topSpeed,zeroSixty,mileage
+TMX20122,AnyCompany Motors, Coupe, 2012, 335, 155, 4.1, 50000
+TM320163,AnyCompany Motors, Sedan, 2016, 240, 140, 5.2, 20000
+TMX20121,AnyCompany Motors, SUV, 2012, 295, 155, 4.7, 100000
+TMX20204,AnyCompany Motors, Truck, 2020, 300, 155, 3.5, 0
+"""
+Your module description
+"""
+    import csv
+    import copy
+    
+    myVehicle = {
+          "vin" : "<empty>",
+          "make" : "<empty>" ,
+          "model" : "<empty>" ,
+          "year" : 0,
+          "range" : 0,
+          "topSpeed" : 0,
+          "zeroSixty" : 0.0,
+          "mileage" : 0
+        }
+    
+  for key, value in myVehicle.items():
+          print("{} : {}".format(key,value))
+          
+                  myInventoryList = [ ]
+    
+"""
+Your module description
+"""
+print("Python has three numeric types: int, float, and complex")
+
+"""
+myValue = 1
+
+print(myValue)
+print(type(myValue))
+print(str(myValue) + " is of the data type " + str(type(myValue)) )
+
+# myValue es un entero
+"""
+
+"""
+myValue = 3.14
+
+print(myValue)
+print(type(myValue))
+print(str(myValue) + " is of the data type " + str(type(myValue)) )
+
+#myVakue es un float
+"""
+
+
+"""
+myValue = 5j
+
+print(myValue)
+print(type(myValue))
+print(str(myValue) + " is of the data type " + str(type(myValue)) )
+
+#myValue es complex
+
+"""
+
+
+"""
+myValue = True
+
+print(myValue)
+print(type(myValue))
+print(str(myValue) + " is of the data type " + str(type(myValue)) )
+
+#myalue es un booleano
+
+"""
+
+"""
+cuanto cobra por hora?
+"""
+
+hora = int(input("cuantas horas trabajas?")) #parseo el texto ingresado a num con int. o viceversa con str, float etc
+cobro = int(input("cuanto cobras x hora?"))
+
+total = hora * cobro
+print(total)
+"""
+Your module description
+"""
+listaNotas = [1,2,3,4,5,6,7,8,9,10]
+
+suma = sum(listaNotas)
+
+print(suma)
+
+"""
+Your module description
+"""
+print("Count to 10!")
+
+for x in range (0,11):
+    print(x)
+"""
+Your module description
+"""
+print("hello world!")
+"""
+usaremos librerias, como buena practica, se ubican al inicio del codigo
+"""
+
+import random #con import llamo a alguna libreria que ya fue creada, en este caso, random
+
+print("Bienvenido a adivina el numero!")
+print("Las reglas son simples. Yo pensaré en un numero, y tu intentarás adivinarlo.")
+
+
+number = random.randint(1,10) #en la variable number guardo un numero generado automaticamente entre 1 y 10
+isGuessRight = False #establezco una variable para forzar que el bucle no termine en la primera
+
+while isGuessRight != True:
+ guess = input("Guess a number between 1 and 10: ")
+ if int(guess) == number:
+   print("You guessed {}. That is correct! You win!".format(guess))
+   isGuessRight = True
+ else:
+   print("You guessed {}. Sorry, that isn’t it. Try again.".format(guess))
+"""
+Your module description
+"""
+#Una lista se destaca por tener los elementos dentro de CORCHETES, 
+#los valores de cada elemento pueden variar a lo largo del flujo
+myFruitList = ["apple", "banana", "cherry"]
+print(myFruitList)
+print(type(myFruitList))
+
+print(myFruitList [0])
+print(myFruitList [1])
+print(myFruitList [2])
+
+fruit1 = input("ingresa fruta ")
+fruit2 = input("ingresa fruta ")
+fruit3 = input("ingresa fruta ")
+
+listaFrutas = [fruit1 , fruit2 , fruit3]
+
+print(listaFrutas[0])
+
+###########################################
+#TUPLAS: NO pueden cambiar sus valores a lo largo del codigo, a diferencia de las listas!
+# tambien puedo hgacer que los valores que yo ingresen se guarden en la tupla.
+
+verdura1 = input("ingresa verdura ")
+verdura2 = input("ingresa verdura ")
+myFinalAnswerTuple = (verdura1, verdura2, "uva")
+print(myFinalAnswerTuple)
+print(type(myFinalAnswerTuple))
+print(myFinalAnswerTuple[0])
+print(myFinalAnswerTuple[1])
+
+####### DICCIONARIOS ########
+#los dicc son similares a las listas pero 2 o mas elementos no pueden
+#pertencer a la misma variable
+
+color1 = input("ingresa color ")
+color2 = input("ingresa color ")
+color3 = input("ingresa color ")
+
+myFavoriteFruitDictionary = {
+"arturo" : color1,
+"anto" : color2,
+"josu" : color3
+}
+
+print(myFavoriteFruitDictionary)
+print(type(myFavoriteFruitDictionary))
+
+# entre corchetes va el elemento que tiene asignado el valor
+
+print(myFavoriteFruitDictionary["arturo"])
+print(myFavoriteFruitDictionary["anto"])
+print(myFavoriteFruitDictionary["josu"])
+
+
+"""
+Your module description
+"""
+ 
+ #split separa en partes cada "," que ve, puede ser por otras medidas x ejemplo cada #
+ #los guarda en una lista
+txt = "hello, my name is Peter, I am 26 years old"
+
+x = txt.split(", ")
+# o
+txt = txt.split(", ")
+
+print(x)
+print(txt)
+
+#ejemplo con #
+lista = "1,2,3,4,5,6"
+
+lista = lista.split("#")
+print(lista)
+
+
+#saber cual es el num mas grande y pequeño de la siguiente LISTA
+
+lista_Numeros = [50, 75, 46, 22, 80, 65, 8]
+
+maximo = max(lista_Numeros)
+minimo = min(lista_Numeros)
+
+print("El numero mas grande de la lista es ", maximo, " y el numero mas pequeño es", minimo)
+
+
+"""
+FOR
+"""
+
+listaaa = [2, "abc", "anto", "30", True]
+
+for item in listaaa:
+    print(item, str(type(item)))
+         ___        ______     ____ _                 _  ___  
+        / \ \      / / ___|   / ___| | ___  _   _  __| |/ _ \ 
+       / _ \ \ /\ / /\___ \  | |   | |/ _ \| | | |/ _` | (_) |
+      / ___ \ V  V /  ___) | | |___| | (_) | |_| | (_| |\__, |
+     /_/   \_\_/\_/  |____/   \____|_|\___/ \__,_|\__,_|  /_/ 
+ ----------------------------------------------------------------- 
+
+
+Hi there! Welcome to AWS Cloud9!
+
+To get started, create some files, play with the terminal,
+or visit https://docs.aws.amazon.com/console/cloud9/ for our documentation.
+
+Happy coding!
+
+"""
+Your module description
+"""
+
+"""
+myString = "esto es un string"
+print(myString)
+print(myString + " is of the data type " + str(type(myString)))
+
+firstString = "water"
+secondString = "fall"
+thirdString = firstString + secondString
+print(thirdString)
+
+name = input("What is your name? ")
+print(name)
+
+color = input("What is your favorite color?  ")
+animal = input("What is your favorite animal?  ")
+
+#con .format indicamos el orden en el que queremos que se visualicen las variables para evitar agregar caracteres al concatenar
+#con las llaves indicamos en que orden van las variables
+print("{}, you like a {} {}!".format(name,color,animal)) 
+print("{}, you like a {} {}!".format(color,name,animal)) 
+
+"""
